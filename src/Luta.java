@@ -36,12 +36,16 @@ public class Luta {
                     this.desafiante.empatarLuta();
                     break;
                 case 1: //DESAFIADO VENCE
-                    System.out.println(this.desafiado + "venceu!");
+                    System.out.println("=========================");
+                    System.out.println(this.desafiado.getNome() + "venceu!");
+                    System.out.println("=========================");
                     this.desafiado.ganharLuta();
                     this.desafiante.perderLuta();
                     break;
                 case 2: //DESAFIANTE VENCE
-                    System.out.println(this.desafiante + "venceu!");
+                    System.out.println("=========================");
+                    System.out.println(this.desafiante.getNome() + "venceu!");
+                    System.out.println("=========================");
                     this.desafiante.ganharLuta();
                     this.desafiado.perderLuta();
                     break;
