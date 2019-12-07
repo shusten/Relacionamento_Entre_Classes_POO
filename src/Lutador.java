@@ -17,7 +17,7 @@ private int empates;
         System.out.println("Lutador " + this.getNome());
         System.out.println("Vindo de :" + this.getNacionalidade());
         System.out.println(" de " + this.getIdade() + " anos");
-        System.out.println(getAltura() + " m de altura ");
+        System.out.println(this.getAltura() + " m de altura ");
         System.out.println("Pesando " + this.getPeso() + "Kg");
         System.out.println("Ganhou: " + this.getVitorias());
         System.out.println("Perdeu: " + this.getDerrotas());
