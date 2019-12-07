@@ -1,4 +1,3 @@
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 public class Lutador {
 private String nome;
@@ -29,6 +28,7 @@ private int empates;
     public void status(){
         System.out.println("---------------------------");
         System.out.println(this.getNome());
+        System.out.println(this.getAltura());
         System.out.println("é um peso " + this.getCategoria());
         System.out.println(this.getVitorias() + " vitórias");
         System.out.println(this.getDerrotas() + " derrotas");
@@ -58,6 +58,8 @@ private int empates;
         this.vitorias = vi;
         this.derrotas = de;
         this.empates = em;
+        this.altura = al;
+
     }
 
     public String getNome() {
