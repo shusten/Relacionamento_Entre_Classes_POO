@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Luta {
     private Lutador desafiado;
     private Lutador desafiante;
@@ -18,10 +20,37 @@ public class Luta {
 
     }
 
-    public void lutar(){
+    public void lutar() {
+        if (this.aprovada) {
+            System.out.println("=========DESAFIADO===========");
+            desafiado.apresentar();
+            System.out.println("=========DESAFIADO===========");
+            desafiante.apresentar();
+
+            Random aleatorio = new Random();
+            int vencedor = aleatorio.nextInt(3); //0 1 2
+            switch (vencedor) {
+                case 0: //Empate
+                    System.out.println("#EMPATOU!#");
+                    this.desafiado.empatarLuta();
+                    this.desafiante.empatarLuta();
+                    break;
+                case 1: //DESAFIADO VENCE
+                    System.out.println(this.desafiado + "venceu!");
+                    this.desafiado.ganharLuta();
+                    this.desafiante.perderLuta();
+                    break;
+                case 2: //DESAFIANTE VENCE
+                    System.out.println(this.desafiante + "venceu!");
+                    this.desafiante.ganharLuta();
+                    this.desafiado.perderLuta();
+                    break;
+            }
+
+        }
+        // ======= MÉTODOS ESPECIAIS ==========
 
     }
-                     // ======= MÉTODOS ESPECIAIS ==========
 
     public Lutador getDesafiado() {
         return desafiado;
